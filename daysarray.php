@@ -1,39 +1,18 @@
-<?php
-// Create array with days of the week in English
-$days = array(
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday"
-);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Using PHP Variables, arrays and operators</title>
+</head>
 
-// Display the English days
-echo "<h2>Days of the Week in English:</h2>";
-echo "<ul>";
-foreach ($days as $day) {
-    echo "<li>$day</li>";
-}
-echo "</ul>";
 
-// Update the array to French days
-$days = array(
-    "Dimanche",   // Sunday
-    "Lundi",      // Monday
-    "Mardi",      // Tuesday
-    "Mercredi",   // Wednesday
-    "Jeudi",      // Thursday
-    "Vendredi",   // Friday
-    "Samedi"      // Saturday
-);
-
-// Display the French days
-echo "<h2>Days of the Week in French:</h2>";
-echo "<ul>";
-foreach ($days as $day) {
-    echo "<li>$day</li>";
-}
-echo "</ul>";
+<body>
+    <h1>PHP Variables, arrays and operators</h1>
+    <?php
+$days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+echo "English: " . implode(", ", $days) . "<br>";
+$days = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+echo "French: " . implode(", ", $days);
 ?>
+</body>
+</html>
